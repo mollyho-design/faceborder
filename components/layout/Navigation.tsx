@@ -9,8 +9,12 @@ const navLinks = [
     label: '關於我們',
     href: '/about',
     submenu: [
-      { label: '公司簡介', href: '/about' },
-      { label: 'LAC 認證中心', href: '/about#lac' },
+      { label: 'CSI-Brain 2015 新聞影片', href: '/about/news' },
+      { label: 'LAC 全球訓練認證中心', href: '/about/lac' },
+      { label: '遊戲+邏輯=創新教學', href: '/about/teaching' },
+      { label: '遊戲+邏輯=人才發展', href: '/about/talent' },
+      { label: 'GAT 邏輯思考教學', href: '/about/gat' },
+      { label: '邏輯思考認證簽約', href: '/about/certification' },
     ]
   },
   {
@@ -21,6 +25,7 @@ const navLinks = [
       { label: '訓練培訓', href: '/services/training' },
       { label: 'CSI-Brain 遊戲軟體', href: '/services/software' },
       { label: 'CSI VOTE 職能投票', href: '/services/voting' },
+      { label: '下載專區', href: '/services/download' },
     ]
   },
   {
@@ -33,7 +38,8 @@ const navLinks = [
     submenu: [
       { label: '健腦思考營', href: '/activities/camp' },
       { label: '玩遊戲學邏輯思考競賽', href: '/activities/competition' },
-      { label: 'GAT 教學研習', href: '/activities/gat' },
+      { label: 'GAT 教學研習 (一)', href: '/activities/gat' },
+      { label: 'GAT 教學研習 (二)', href: '/activities/gat-2' },
     ]
   },
   {
@@ -79,7 +85,7 @@ export default function Navigation() {
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: 10 }}
-                    className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[200px]"
+                    className="absolute top-full left-0 mt-2 bg-white rounded-lg shadow-lg border border-gray-100 py-2 min-w-[220px]"
                   >
                     {link.submenu.map((item) => (
                       <Link
@@ -157,9 +163,9 @@ export default function Navigation() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-              className="absolute right-0 top-0 bottom-0 w-[280px] bg-white shadow-xl pt-20 px-6"
+              className="absolute right-0 top-0 bottom-0 w-[300px] bg-white shadow-xl pt-20 px-6 overflow-y-auto"
             >
-              <ul className="space-y-4">
+              <ul className="space-y-4 pb-8">
                 {navLinks.map((link) => (
                   <li key={link.label}>
                     <Link
