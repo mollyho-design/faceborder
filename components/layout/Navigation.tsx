@@ -7,40 +7,38 @@ import { motion, AnimatePresence } from 'framer-motion'
 const navLinks = [
   {
     label: '關於我們',
-    href: '#about',
+    href: '/about',
     submenu: [
-      { label: 'CSI-Brain 2015 新聞影片', href: '#news' },
-      { label: 'LAC 全球訓練認證中心成立', href: '#lac' },
-      { label: 'CSI-Brain 遊戲+邏輯=創新教學', href: '#teaching' },
-      { label: 'CSI-Brain 遊戲+邏輯=人才發展', href: '#talent' },
+      { label: '公司簡介', href: '/about' },
+      { label: 'LAC 認證中心', href: '/about#lac' },
     ]
   },
   {
     label: '服務項目',
-    href: '#services',
+    href: '/services',
     submenu: [
-      { label: '顧問諮詢', href: '#consulting' },
-      { label: '訓練培訓', href: '#training' },
-      { label: 'CSI-Brain 遊戲軟體', href: '#software' },
-      { label: 'CSI VOTE 職能投票', href: '#vote' },
+      { label: '顧問諮詢', href: '/services/consulting' },
+      { label: '訓練培訓', href: '/services/training' },
+      { label: 'CSI-Brain 遊戲軟體', href: '/services/software' },
+      { label: 'CSI VOTE 職能投票', href: '/services/voting' },
     ]
   },
   {
     label: '遊戲化',
-    href: '#gamification',
+    href: '/gamification',
   },
   {
     label: '活動資訊',
-    href: '#activities',
+    href: '/activities',
     submenu: [
-      { label: '健腦思考營', href: '#camp' },
-      { label: '玩遊戲學邏輯思考競賽', href: '#competition' },
-      { label: 'GAT 教學研習', href: '#gat' },
+      { label: '健腦思考營', href: '/activities/camp' },
+      { label: '玩遊戲學邏輯思考競賽', href: '/activities/competition' },
+      { label: 'GAT 教學研習', href: '/activities/gat' },
     ]
   },
   {
     label: '我們的夥伴',
-    href: '#partners',
+    href: '/partners',
   },
 ]
 
@@ -98,7 +96,7 @@ export default function Navigation() {
             ))}
             <li>
               <Link
-                href="#"
+                href="/en"
                 className="text-gray-500 hover:text-orange-500 transition-colors text-sm"
               >
                 English
@@ -190,7 +188,7 @@ export default function Navigation() {
                 ))}
                 <li>
                   <Link
-                    href="#"
+                    href="/en"
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-2 text-gray-500 hover:text-orange-500"
                   >
